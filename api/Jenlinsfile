@@ -7,7 +7,7 @@ pipeline {
     environment {
 
     DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-     registry = "mubeen507/backend-lms"
+     registry = "ramakrishna0902/backend-lms"
         registryCredential = 'dockerhub'
         dockerImage = ''
     }
@@ -17,7 +17,7 @@ pipeline {
         
         stage('Building the docker image') {
             steps {
-                sh 'cd api && docker build -t mubeen507/backend-lms .'
+                sh 'cd api && docker build -t ramakrishna0902/backend-lms .'
             }
         }
         stage('Logging into dockerhub account') {
